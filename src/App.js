@@ -1,9 +1,15 @@
+import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
+import Dashboard from "./components/layouts/Dashboard";
+import NavBar from "./components/layouts/NavBar";
 
 function App() {
   return (
     <div className="App">
-      <h2>Hello</h2>
+      <div class="container-fluid">
+        <NavBar />
+        <Dashboard />
+      </div>
     </div>
   );
 }
