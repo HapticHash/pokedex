@@ -4,7 +4,7 @@ import axios from "axios";
 
 function PokemonList() {
   const [pokemon, setPokemon] = useState([]);
-  const url = "https://pokeapi.co/api/v2/pokemon";
+  const url = "https://pokeapi.co/api/v2/pokemon/?limit=3";
   useEffect(() => {
     async function fetchData() {
       const request = await axios.get(url);
@@ -18,11 +18,7 @@ function PokemonList() {
   return (
     <div className="row">
       {pokemon.map((pokemon) => (
-        <PokemonCard
-          key={pokemon.name}
-          name={pokemon.name}
-          imageUrl={pokemon.url}
-        />
+        <PokemonCard name={pokemon.name} imageUrl={pokemon.url} />
       ))}
     </div>
   );
