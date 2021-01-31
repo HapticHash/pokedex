@@ -7,14 +7,97 @@
   text-transform: capitalize;
   font-family: "Montserrat", sans-serif;
 }
+.group {
+  position: relative;
+  margin-top: 6em;
+}
+.details {
+  margin-top: 25%;
+}
+.id {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 10em;
+  color: #e9e8e7;
+  z-index: 0;
+}
 .images {
-  width: 50%;
+  position: absolute;
+  width: 30%;
   height: 12em;
   margin: 20px auto;
+  z-index: 99;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
-.card-body {
+.card-desc {
   display: block;
   justify-content: space-between;
   width: 80%;
+  margin: 0 auto 2em;
+}
+.type {
+  font-weight: 600;
   margin: 0 auto;
+  text-transform: capitalize;
+}
+
+.type.-bug {
+  color: #9cb820;
+}
+.type.-dragon {
+  color: #7038f8;
+}
+.type.-fairy {
+  color: #f09ad9;
+}
+.type.-fire {
+  color: #f08030;
+}
+.type.-ghost {
+  color: #705898;
+}
+.type.-ground {
+  color: #e0b668;
+}
+.type.-normal {
+  color: #a8a8a8;
+}
+.type.-psychic {
+  color: #eb2d77;
+}
+.type.-steel {
+  color: #6d8f9c;
+}
+.type.-dark {
+  color: #504843;
+}
+.type.-electric {
+  color: #c09643;
+}
+.type.-fighting {
+  color: #c03028;
+}
+.type.-flying {
+  color: #9096f0;
+}
+.type.-grass {
+  color: #22c02a;
+}
+.type.-ice {
+  color: #98d8d8;
+}
+.type.-poison {
+  color: #a040a0;
+}
+.type.-rock {
+  color: #b8a038;
+}
+.type.-water {
+  color: #6890f0;
 }
