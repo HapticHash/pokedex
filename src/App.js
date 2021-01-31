@@ -6,8 +6,8 @@ import NavBar from "./components/layouts/NavBar";
 function App() {
   return (
     <div className="App">
-      <div class="container-fluid">
-        <NavBar />
+      <NavBar />
+      <div class="container-fluid main">
         <Dashboard />
       </div>
     </div>
