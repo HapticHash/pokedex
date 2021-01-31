@@ -7,7 +7,7 @@ function App() {
   return (
     <div className="App">
       <NavBar />
-      <div class="container-fluid main">
+      <div className="container-fluid main">
         <Dashboard />
       </div>
     </div>
