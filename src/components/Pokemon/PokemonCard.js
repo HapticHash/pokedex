@@ -21,6 +21,7 @@ function PokemonCard({ name, imageUrl }) {
       //   console.log(element.type.name);
       // });
       setType(request.data.types[0].type.name);
+
       setImageUrls(request.data.sprites.other.dream_world.front_default);
       setBaseExp(request.data.base_experience);
       setHeight(request.data.height);
@@ -44,10 +45,16 @@ function PokemonCard({ name, imageUrl }) {
         <div className="details">
           <h5 className="card-title">{name}</h5>
           <div className="card-desc">
-            <div className="type `${type}`">{type}</div>
-            <div className="base_exp"> {baseExp} exp </div>
-            <div className="height"> {height} in </div>
-            <div className="weight"> {weight} lbs </div>
+            <div className="pokemon__type">
+              <div className={type} id="type">
+                {type} type pokemon
+              </div>
+            </div>
+            <div className="pokemon__body">
+              <div className="height"> {(height / 10).toFixed(1)} m </div>
+              <div className="weight"> {weight / 10} kg </div>
+              <div className="base_exp"> {baseExp} exp </div>
+            </div>
           </div>
         </div>
       </div>
