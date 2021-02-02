@@ -31,7 +31,7 @@ function PokemonCard({ name, imageUrl }) {
   }, [url]);
 
   return (
-    <div className="col-md-3 col-sm-6 mb-5">
+    <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6 mb-5">
       <div className="card">
         <div className="group">
           <img className="images" src={imageurls} alt={name} />

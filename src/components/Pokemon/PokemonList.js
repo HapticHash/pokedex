@@ -4,7 +4,7 @@ import axios from "axios";
 
 function PokemonList() {
   const [pokemon, setPokemon] = useState([]);
-  const url = "https://pokeapi.co/api/v2/pokemon/?limit=10";
+  const url = "https://pokeapi.co/api/v2/pokemon/?limit=648";
   useEffect(() => {
     async function fetchData() {
       const request = await axios.get(url);

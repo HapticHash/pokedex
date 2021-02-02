@@ -5,6 +5,7 @@
 }
 .card-title {
   text-transform: capitalize;
+  font-weight: 700;
   font-family: "Montserrat", sans-serif;
 }
 .group {
@@ -21,15 +22,14 @@
   transform: translate(-50%, -50%);
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
-  font-size: 10em;
+  font-size: 6.5em;
   color: #e9e8e7;
   z-index: 0;
 }
 .images {
   position: absolute;
-  width: 30%;
-  height: 12em;
-  margin: 20px auto;
+  width: 25%;
+  margin: 10px auto;
   z-index: 99;
   top: 50%;
   left: 50%;
@@ -38,7 +38,7 @@
 .card-desc {
   display: block;
   justify-content: space-between;
-  width: 80%;
+  width: 90%;
   margin: 0 auto 2em;
 }
 .pokemon__type {
@@ -161,4 +161,14 @@
 }
 #type.water {
   color: #6890f0;
+}
+
+@media only screen and (max-width: 600px) {
+  .main {
+    margin-top: 15%;
+  }
+  .card-title {
+    font-size: 1.4em;
+    font-weight: 700;
+  }
 }
