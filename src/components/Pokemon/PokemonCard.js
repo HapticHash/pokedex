@@ -15,7 +15,8 @@ function PokemonCard({ name, imageUrl }) {
   useEffect(() => {
     async function fetchData() {
       const request = await axios.get(url);
-      setId(request.data.id);
+      setId(String(request.data.id).padStart(3, "0"));
+
       setType(request.data.types);
       setAbilities(request.data.abilities);
 
@@ -24,7 +25,7 @@ function PokemonCard({ name, imageUrl }) {
       setHeight(request.data.height);
       setWeight(request.data.weight);
 
-      console.log(">>>", request.data.abilities);
+      // console.log(">>>", request.data.abilities);
       return request;
     }
     fetchData();
