@@ -16,19 +16,14 @@ function PokemonCard({ name, imageUrl }) {
       const request = await axios.get(url);
       setId(request.data.id);
 
-      // request.data.types.forEach((element) => {
-      //   setTypes(element.type.name);
-      //   console.log(element.type.name);
-      // });
-      setType(request.data.types[0].type.name);
+      setType(request.data.types);
 
       setImageUrls(request.data.sprites.other.dream_world.front_default);
       setBaseExp(request.data.base_experience);
       setHeight(request.data.height);
       setWeight(request.data.weight);
-      // setMoves(request.data.moves);
 
-      console.log(">>>", request.data);
+      console.log(">>>", request.data.abilities);
       return request;
     }
     fetchData();
@@ -46,9 +41,11 @@ function PokemonCard({ name, imageUrl }) {
           <h5 className="card-title">{name}</h5>
           <div className="card-desc">
             <div className="pokemon__type">
-              <div className={type} id="type">
-                {type} type pokemon
-              </div>
+              {type.map((type) => (
+                <div className={type.type.name} id="type">
+                  {type.type.name}
+                </div>
+              ))}
             </div>
             <div className="pokemon__body">
               <div className="height"> {(height / 10).toFixed(1)} m </div>

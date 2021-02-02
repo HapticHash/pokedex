@@ -43,14 +43,29 @@
 }
 .pokemon__type {
   display: flex;
-  width: 100%;
+  width: 45%;
+  justify-content: center;
+  white-space: nowrap;
   margin: 0 auto;
+  text-align: center;
 }
 #type {
   font-weight: 600;
-  margin: 0 auto;
   text-transform: capitalize;
 }
+
+#type + #type::before {
+  background-color: #a39f99;
+  border-radius: 50%;
+  content: "";
+  display: inline-block;
+  height: 6px;
+  width: 6px;
+  margin-left: 10px;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
 .pokemon__body {
   display: flex;
   justify-content: space-between;
