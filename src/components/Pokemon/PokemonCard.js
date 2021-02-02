@@ -5,6 +5,7 @@ import "./PokemonCard.css";
 function PokemonCard({ name, imageUrl }) {
   const [id, setId] = useState([]);
   const [type, setType] = useState([]);
+  const [abilities, setAbilities] = useState([]);
   const [imageurls, setImageUrls] = useState([]);
   const [weight, setWeight] = useState([]);
   const [height, setHeight] = useState([]);
@@ -15,8 +16,8 @@ function PokemonCard({ name, imageUrl }) {
     async function fetchData() {
       const request = await axios.get(url);
       setId(request.data.id);
-
       setType(request.data.types);
+      setAbilities(request.data.abilities);
 
       setImageUrls(request.data.sprites.other.dream_world.front_default);
       setBaseExp(request.data.base_experience);
@@ -45,6 +46,11 @@ function PokemonCard({ name, imageUrl }) {
                 <div className={type.type.name} id="type">
                   {type.type.name}
                 </div>
+              ))}
+            </div>
+            <div className="pokemon__abilities">
+              {abilities.map((abilities) => (
+                <div className="ability">{abilities.ability.name}</div>
               ))}
             </div>
             <div className="pokemon__body">
