@@ -28,8 +28,8 @@
 }
 .images {
   position: absolute;
-  width: 20%;
-  margin: 10px auto;
+  width: 28%;
+  margin: 0 auto;
   z-index: 99;
   top: 50%;
   left: 50%;

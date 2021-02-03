@@ -21,11 +21,11 @@ function PokemonCard({ name, imageUrl }) {
       setAbilities(request.data.abilities);
 
       setImageUrls(request.data.sprites.other.dream_world.front_default);
+      // setImageUrls(request.data.sprites.versions["generation-v"]["black-white"].animated["front_default"]);
       setBaseExp(request.data.base_experience);
       setHeight(request.data.height);
       setWeight(request.data.weight);
 
-      // console.log(">>>", request.data.abilities);
       return request;
     }
     fetchData();

@@ -4,7 +4,7 @@ import axios from "axios";
 
 function PokemonList() {
   const [pokemon, setPokemon] = useState([]);
-  const url = "https://pokeapi.co/api/v2/pokemon/?limit=150";
+  const url = "https://pokeapi.co/api/v2/pokemon/?limit=30";
   useEffect(() => {
     async function fetchData() {
       const request = await axios.get(url);
@@ -14,7 +14,10 @@ function PokemonList() {
     fetchData();
   }, [url]);
 
-  console.log(pokemon);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className="row">
       {pokemon.map((pokemon) => (
